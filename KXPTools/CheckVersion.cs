@@ -31,13 +31,7 @@ namespace KXP.EGB.Tools
             if (expressVersion.Major == 1 && expressVersion.Minor == 0)
                 return "Kofax Express";
 
-            if (expressVersion.Major == 1 && expressVersion.Minor == 1)
-                return "Kofax Express 1.1";
-
-            if (expressVersion.Major == 2 && expressVersion.Minor == 0)
-                return "Kofax Express 2.0";
-
-            return string.Empty;
+			return string.Format("Kofax Express {0}.{1}", expressVersion.Major, expressVersion.Minor);
         }
 
         private static string GetVersion(string file)
